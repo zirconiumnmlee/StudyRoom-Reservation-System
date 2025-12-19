@@ -1,6 +1,15 @@
 import tkinter as tk
+from ui.main_window import MainWindow
+from database.database import init_database
 
-root = tk.Tk()
-root.title("自习室座位预约管理系统")
-root.geometry("600x400")
-root.mainloop()
+
+def main():
+    init_database()
+
+    root = tk.Tk()
+    MainWindow(root)
+    root.mainloop()
+
+
+if __name__ == "__main__":
+    main()

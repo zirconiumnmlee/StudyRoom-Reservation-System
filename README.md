@@ -82,3 +82,10 @@ mkdir data
 python database/database.py
 ```
 
+## Run
+```
+python main.py
+```
+
+## TODO
+- ⏳ 预约时检查学号是否合法
