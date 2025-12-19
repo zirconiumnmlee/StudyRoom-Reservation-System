@@ -85,3 +85,4 @@ python main.py
 
 ## TODO
 - ⏳ Check the validity of student ID during reservation
+- ⏳ E-R Graph

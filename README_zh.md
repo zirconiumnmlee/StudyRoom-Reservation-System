@@ -91,3 +91,4 @@ python main.py
 
 ## TODO
 - ⏳ 预约时检查学号是否合法
+- ⏳ E-R图
