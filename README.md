@@ -17,6 +17,9 @@ Python 3.10
 ## Database Design
 Database: data/studyroom.db
 
+### E-R Diagram
+![E-R Diagram](img/er_zh.png)
+
 ### Student Table: `student`
 Used to store basic information of students in the system, as the main body of seat reservation.
 
@@ -50,11 +53,9 @@ Used to store specific seat information in each study room.
 |seat_id|INTEGER|Seat ID|Primary Key, Auto-increment|
 |room_id|INTEGER|Belonging Study Room ID|Foreign Key|
 |seat_number|INTEGER|Seat Number|Not Null|
-|status|TEXT|Seat Status|Nullable|
 
 - `room_id` foreign key references `study_room(room_id)`
 - One study room corresponds to multiple seats (1 to many)
-- `status` can be: Available / Disabled
 
 ### Reservation Table: `reservation`(core)
 Used to record students' reservation information for seats.
@@ -84,5 +85,5 @@ python main.py
 ```
 
 ## TODO
-- ⏳ Check the validity of student ID during reservation
-- ⏳ E-R Graph
+- ✅ Check the validity of student ID during reservation
+- ✅ E-R Diagram

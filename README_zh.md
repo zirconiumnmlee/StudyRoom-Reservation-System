@@ -15,6 +15,9 @@ Python 3.10
 ## Database Design
 Database: data/studyroom.db
 
+### E-R Diagram
+![E-R图](img/er_zh.png)
+
 ### Student Table: `student`
 
 用于存储系统中学生的基本信息，作为座位预约的主体。
@@ -55,11 +58,9 @@ Database: data/studyroom.db
 |seat_id|INTEGER|座位编号|主键，自增|
 |room_id|INTEGER|所属自习室编号|外键|
 |seat_number|INTEGER|座位号|非空|
-|status|TEXT|座位状态|可空|
 
 - `room_id` 外键引用 `study_room(room_id)`
 - 一个自习室对应多个座位（1 对多）
-- `status` 可表示：可用 / 停用
 
 ### Reservation Table: `reservation`(core)
 
@@ -69,7 +70,7 @@ Database: data/studyroom.db
 |---|---|---|---|
 |reservation_id|INTEGER|预约编号|主键，自增|
 |student_id|TEXT|学号|外键|
-|seat_id|INTEGER|座位编号|外键|
+|seat_id|INTEGER|座位编号|外键|V
 |reserve_date|TEXT|预约日期|非空|
 |time_slot|TEXT|时间段|非空|
 
@@ -90,5 +91,5 @@ python main.py
 ```
 
 ## TODO
-- ⏳ 预约时检查学号是否合法
-- ⏳ E-R图
+- ✅ 预约时检查学号是否合法
+- ✅ E-R图
