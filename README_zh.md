@@ -17,6 +17,7 @@ Database: data/studyroom.db
 
 ### E-R Diagram
 ![E-R图](img/er_zh.png)
+> 绘制E-R图的网站: [diagrams](https://app.diagrams.net/)
 
 ### Student Table: `student`
 

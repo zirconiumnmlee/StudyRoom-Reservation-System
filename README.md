@@ -19,6 +19,7 @@ Database: data/studyroom.db
 
 ### E-R Diagram
 ![E-R Diagram](img/er_zh.png)
+> The website for E-R diagram drawing: [diagrams](https://app.diagrams.net/)
 
 ### Student Table: `student`
 Used to store basic information of students in the system, as the main body of seat reservation.
