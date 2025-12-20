@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
+import sqlite3
 
 from dao.room_dao import get_all_study_rooms
 from dao.reservation_dao import (
@@ -134,6 +135,12 @@ class ReservationManager:
             add_reservation(student_id, seat_id, date, time_slot)
             messagebox.showinfo("成功", "预约成功", parent=self.window)
             self.load_reservations()
+        except sqlite3.IntegrityError:
+            messagebox.showerror(
+                "错误",
+                "学号不存在，请先添加学生",
+                parent=self.window
+            )
         except Exception as e:
             messagebox.showerror("错误", str(e), parent=self.window)
 
