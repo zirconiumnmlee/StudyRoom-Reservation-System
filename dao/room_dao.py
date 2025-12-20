@@ -43,12 +43,12 @@ def init_seats_for_room(room_id, seat_count):
     cursor = conn.cursor()
 
     sql = """
-    INSERT INTO seat (room_id, seat_number, status)
-    VALUES (?, ?, ?)
+    INSERT INTO seat (room_id, seat_number)
+    VALUES (?, ?)
     """
 
     for i in range(1, seat_count + 1):
-        cursor.execute(sql, (room_id, i, "available"))
+        cursor.execute(sql, (room_id, i))
 
     conn.commit()
     conn.close()
@@ -62,7 +62,7 @@ def get_seats_by_room(room_id):
     cursor = conn.cursor()
 
     sql = """
-    SELECT seat_id, seat_number, status
+    SELECT seat_id, seat_number
     FROM seat
     WHERE room_id = ?
     ORDER BY seat_number

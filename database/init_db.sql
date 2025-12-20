@@ -18,7 +18,6 @@ CREATE TABLE IF NOT EXISTS seat (
     seat_id INTEGER PRIMARY KEY AUTOINCREMENT,
     room_id INTEGER NOT NULL,
     seat_number INTEGER NOT NULL,
-    status TEXT,
     FOREIGN KEY (room_id) REFERENCES study_room(room_id)
 );
 
